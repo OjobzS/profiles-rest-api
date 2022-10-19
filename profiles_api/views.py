@@ -5,7 +5,7 @@ from rest_framework.response import Response
 class HelloApiView(APIView):
     """Test API View"""
     
-    def get(self, request, format=NONE):
+    def get(self, request, format=None):
         """Returns a list of APIViews features"""
         an_apiview = [
             'Uses HTTP methods as functions(get, post, patch, put, delete)',
@@ -14,4 +14,4 @@ class HelloApiView(APIView):
             'Is mapped manually to URLs',
         ]
     
-    return Response({'message':'Hello!', 'an_apiview': an_apiview})
+        return Response({'message':'Hello!', 'an_apiview': an_apiview})
